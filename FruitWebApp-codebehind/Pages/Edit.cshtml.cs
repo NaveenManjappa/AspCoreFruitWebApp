@@ -40,7 +40,26 @@ namespace FruitWebApp.Pages
 		
 
 		// Begin PUT operation code
-        
+        public async Task<IActionResult> OnPost(){
+            var jsonContent=new StringContent(JsonSerializer.Serialize(FruitModels),
+            Encoding.UTF8,
+            "application/json"
+            );
+
+            var httpClient=_httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpResponseMessage response=await httpClient.PutAsync(FruitModels.id.ToString(),jsonContent);
+
+            if(response.IsSuccessStatusCode){
+                TempData["success"]="Data was edited successfully";
+                return RedirectToPage("Index");
+            }
+            else{
+                TempData["failure"]="Operation was not successful";
+                return RedirectToPage("Index");
+            }
+
+        }
         // End PUT operation code
 
 	}
