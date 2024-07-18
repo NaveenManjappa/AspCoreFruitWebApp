@@ -23,7 +23,17 @@ namespace FruitWebApp.Pages
         public IEnumerable<FruitModel> FruitModels { get; set; }
 
         // Begin GET operation code
-        
+        public async Task OnGet(){
+            var httpClient=_httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpResponseMessage response = await httpClient.GetAsync("");
+
+            if(response.IsSuccessStatusCode){
+                using var contentStream=await response.Content.ReadAsStreamAsync();
+
+                FruitModels=await JsonSerializer.DeserializeAsync<IEnumerable<FruitModel>>(contentStream);
+            }
+        }
         // End GET operation code
     }
 }

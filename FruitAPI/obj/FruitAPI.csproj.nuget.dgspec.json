@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Explore\\MS Applied Skills - net core\\FruitAPI\\FruitAPI.csproj": {}
+    "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitAPI\\FruitAPI.csproj": {}
   },
   "projects": {
-    "C:\\Explore\\MS Applied Skills - net core\\FruitAPI\\FruitAPI.csproj": {
+    "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitAPI\\FruitAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Explore\\MS Applied Skills - net core\\FruitAPI\\FruitAPI.csproj",
+        "projectUniqueName": "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitAPI\\FruitAPI.csproj",
         "projectName": "FruitAPI",
-        "projectPath": "C:\\Explore\\MS Applied Skills - net core\\FruitAPI\\FruitAPI.csproj",
+        "projectPath": "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitAPI\\FruitAPI.csproj",
         "packagesPath": "C:\\Users\\nmanjappa\\.nuget\\packages\\",
-        "outputPath": "C:\\Explore\\MS Applied Skills - net core\\FruitAPI\\obj\\",
+        "outputPath": "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nmanjappa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,9 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {

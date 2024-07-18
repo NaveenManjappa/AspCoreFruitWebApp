@@ -12,7 +12,9 @@ builder.Services.AddRazorPages();
 
 // Begin HTTP client code
 
-
+builder.Services.AddHttpClient("FruitAPI",httpClient =>{
+    httpClient.BaseAddress = new Uri("http://localhost:5050/fruitlist/");
+});
 
 // End of HTTP client code
 
