@@ -40,7 +40,20 @@ namespace FruitWebApp.Pages
 		
 
 		// Begin DELETE operation code
-        
+        public async Task<IActionResult> OnPost(){
+            var httpClient = _httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpResponseMessage response=await httpClient.DeleteAsync(FruitModels.id.ToString());
+
+            if(response.IsSuccessStatusCode){
+                TempData["success"]="Data was deleted successfully";
+                return RedirectToPage("Index");
+            }
+            else{
+                TempData["failure"]="Operation was not successfull";
+                return RedirectToPage("Index");
+            }
+        }
         // End DELETE operation code
 
 	}
