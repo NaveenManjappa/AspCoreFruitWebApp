@@ -49,6 +49,40 @@
         </thead>
 
         @* Begin render API data code block *@
+        <tbody>
+            @foreach(var obj in Model.FruitModels)
+            {
+                <tr>
+                    <td width="50%">@obj.name</td>
+                    @{
+                        if(obj.instock)
+                        {
+                            <td width="20%" class="text-md-center">
+                                <i class="bi bi-check-circle" style="font-size: 1rem;color:green;">Yes</i>
+                            </td>
+                        }
+                        else{
+                            <td width="20%" class="text-md-center">
+                                <i class="bi bi-dash-circle" style="font-size: 1rem;color:red;">No</i>
+                            </td>
+                        }
+                    }
+
+                    <td width="30%" class="text-center">
+                        <div class="w-75 btn-group btn-group-sm" role="group" style="text-align:center">
+                            <a asp-page="Edit" app-route-id="@obj.id" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+
+                            <a asp-page="Delete" app-route-id="@obj.id" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </div>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
         
         @* End render API data code block *@
 
