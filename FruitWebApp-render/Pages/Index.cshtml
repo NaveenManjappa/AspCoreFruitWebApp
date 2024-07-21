@@ -70,11 +70,11 @@
 
                     <td width="30%" class="text-center">
                         <div class="w-75 btn-group btn-group-sm" role="group" style="text-align:center">
-                            <a asp-page="Edit" app-route-id="@obj.id" class="btn btn-primary mx-2">
+                            <a asp-page="Edit" asp-route-id=@obj.id class="btn btn-primary mx-2">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
 
-                            <a asp-page="Delete" app-route-id="@obj.id" class="btn btn-danger mx-2">
+                            <a asp-page="Delete" asp-route-id="@obj.id" class="btn btn-danger mx-2">
                                 <i class="bi bi-trash"></i> Delete
                             </a>
                         </div>

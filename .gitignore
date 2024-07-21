@@ -7,3 +7,5 @@ FruitWebApp-codebehind/obj/project.assets.json
 FruitWebApp-codebehind/obj/project.assets.json
 FruitAPI/.vs/slnx.sqlite
 FruitAPI/.vs/slnx.sqlite
+FruitWebApp-render/bin/Debug/net7.0/FruitWebApp.dll
+FruitAPI/bin/Debug/net7.0/FruitAPI.dll
