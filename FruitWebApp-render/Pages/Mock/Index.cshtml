@@ -1,0 +1,83 @@
+﻿@page
+@model IndexModel
+@{
+  ViewData["Title"]="Mock Page";
+}
+<div class="container">
+
+  <div class="row">
+    <div class="col border-bottom" style="width:80%">
+      <h3 class="display-6">My Mock Fruit List</h3>
+      <p>This is a list of fruits</p>
+    </div>
+  </div>
+  <div class="container pt-4">
+  <div class="row" style="width:80%">
+    <div class="col">
+            @{
+                if(TempData["success"] != null)
+                {
+                    <h4>@TempData["success"]</h4>
+                }
+                else
+                {
+                    <h4>@TempData["failure"]</h4>
+                }
+            }
+
+    </div>
+    <div class="col">
+        <a asp-page="add" class="btn btn-primary">
+            <i class="bi bi-plus-square"></i> Add to List
+            </a>
+    </div>
+  </div>
+    </div>
+
+<table class="table table-bordered table-striped" style="width:80%">
+    <thead>
+        <tr>
+            <th>Fruit Name</th>
+            <th>Available?</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(var fruit in Model.MockFruits)
+            {
+                <tr>
+                   <td style="width:50%">@fruit.name</td>
+                    @{
+                        if (fruit.instock)
+                        {
+                            <td style="width:30%">
+                            <i class="bi bi-check-square" style="font-size:1rem;color:green;"></i> Yes
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="width:30%">
+                            <i class="bi bi-dash-square" style="font-size:1rem;color:red"></i>No
+                            </td>
+                        }
+                    }
+
+                    <td style="width:20%">
+                        <div class="w75 btn-group" role="group" style="text-align:center;">
+                            <a asp-page="edit" asp-route-id=@fruit.id class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i>Edit
+                            </a>
+
+                            <a asp-page="delete" asp-route-id=@fruit.id class="btn btn-danger">
+                                <i class="bi bi-trash"></i>Delete
+                            </a>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+</table>
+
+
+</div>

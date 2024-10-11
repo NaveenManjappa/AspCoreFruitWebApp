@@ -11,6 +11,7 @@ public class FruitModel
 
     [Display(Name="Fruit Name")]
     public string? name { get; set; }
+    
     [Display(Name ="Available?")]
     public bool instock { get; set; }
 }

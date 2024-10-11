@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fft+mLeEVBTniGsoS3DRtb9hKo6tc+Towu2aDxeyfd3ogV+PzSO3EdSBsNGjgKz73W3IO4upxT2IZ3Y+mc0e2w==",
+  "dgSpecHash": "4rwiz9PDfUdBLJ91db0NJ3mxBUvSlt+21pyZdV0XGJdSQjuZsorySLDtq1cVTUR4dp3zE51rKwgTxi7CvoOf+Q==",
   "success": true,
   "projectFilePath": "C:\\Explore\\MS Applied Skills - net core\\AspCoreFruitWebApp\\FruitWebApp-render\\FruitWebApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nmanjappa\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\nmanjappa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\nmanjappa\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\nmanjappa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\nmanjappa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
   ],

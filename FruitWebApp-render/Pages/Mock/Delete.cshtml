@@ -1,0 +1,30 @@
+﻿@page
+@model FruitWebApp.Pages.Mock.DeleteModel
+@{
+}
+<form method="post">
+    <input hidden asp-for="MockFruit.id" />
+    <div class="border" style="width:50%;">
+        <div class="row">
+            <h2>Delete Fruit</h2>
+            <hr />
+        </div>
+
+        <div>
+            <label asp-for="MockFruit.name" class="h5"></label><br />
+            <input type="text" asp-for="MockFruit.name" />
+            <span asp-validation-for="MockFruit.name"></span>
+        </div>
+
+        <div>
+            <label asp-for="MockFruit.instock" class="h5"></label><br/>
+            <input type="checkbox" asp-for="MockFruit.instock" />
+            <label><i class="bi bi-arrow-left"></i> Check the box if available</label>
+            <span asp-validation-for="MockFruit.instock"></span>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+       
+    </div>
+</form>

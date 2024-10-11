@@ -1,0 +1,28 @@
+﻿@page
+@model FruitWebApp.Pages.Mock.AddModel
+@{
+}
+<form method="post">
+    <input hidden asp-for="MockFruit.id" />
+    <div>
+        <div>
+            <h3>Add Fruit</h3><hr />
+        </div>
+    </div>
+
+    <div>
+        <label asp-for="MockFruit.name" class="h5"></label><br />
+        <input type="text" asp-for="MockFruit.name" />
+        <span asp-validation-for="MockFruit.name"></span>
+
+    </div>
+
+    <div>
+        <label asp-for="MockFruit.instock" class="h5"></label><br />
+        <input type="checkbox" asp-for="MockFruit.instock" />
+        <label><i class="bi bi-left-arrow"></i>Check if fruit is available</label>
+        <span asp-validation-for="MockFruit.instock"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
