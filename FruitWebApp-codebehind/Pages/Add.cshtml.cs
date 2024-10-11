@@ -41,6 +41,22 @@ namespace FruitWebApp.Pages
         }
         
         // End POST operation code
+
+        public async Task<IActionResult> OnPostMock(){
+            var jsonContent=new StringContent(JsonSerializer.Serialize(FruitModels),Encoding.UTF8,"application/json");
+            var httpClient=this._httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpResponseMessage response=await httpClient.PostAsync("",jsonContent);
+
+            if(response.IsSuccessStatusCode){
+                TempData["success"]="Fruit was added successfully";
+                return RedirectToPage("Index");
+            }
+            else {
+                TempData["failure"]="Fruit was not added successfully";
+                return redirectToPage("Index");
+            }
+        }
     }
 }
 

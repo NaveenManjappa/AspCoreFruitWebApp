@@ -8,4 +8,15 @@ FruitWebApp-codebehind/obj/project.assets.json
 FruitAPI/.vs/slnx.sqlite
 FruitAPI/.vs/slnx.sqlite
 FruitWebApp-render/bin/Debug/net7.0/FruitWebApp.dll
-FruitAPI/bin/Debug/net7.0/FruitAPI.dll
+FruitAPI/bin/
+FruitAPI/bin/Debug/net7.0/
+FruitAPI/.vs/
+FruitAPI/bin
+FruitAPI/obj/Debug/net7.0/ref/FruitAPI.dll
+FruitAPI/obj/Debug/net7.0/
+FruitAPI/bin/
+FruitAPI/bin/Debug/net7.0/
+FruitAPI/.vs/
+FruitAPI/bin
+FruitAPI/obj/Debug/net7.0/ref/FruitAPI.dll
+FruitAPI/obj/Debug/net7.0/

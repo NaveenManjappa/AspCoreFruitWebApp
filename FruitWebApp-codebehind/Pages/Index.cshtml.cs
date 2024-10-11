@@ -35,6 +35,16 @@ namespace FruitWebApp.Pages
             }
         }
         // End GET operation code
+
+        public async Task OnGetMock(){
+            var httpClient=this._httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpResponseMessage response= await httpClient.GetAsync("");
+            if(response.IsSuccessStatusCode){
+                using var contentStream=await response.Content.ReadAsStreamAsync();
+                FruitModels = JsonSerializer.Deserialize<IEnumerable<FruitModel>>(contentStream);
+            }
+        }
     }
 }
 

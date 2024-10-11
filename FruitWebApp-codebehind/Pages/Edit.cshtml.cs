@@ -62,6 +62,22 @@ namespace FruitWebApp.Pages
         }
         // End PUT operation code
 
+        public async Task<IActionResult> OnPostMock(){
+            var jsonContent=new StringContent(JsonSerializer.Serialize(FruitModels),Encoding.UTF8,"application/json");
+            var httpClient=_httpClientFactory.CreateClient("FruitAPI");
+
+            using HttpRequestMessage response= await httpClient.PutAsync(FruitModels.id.ToString(),jsonContent);
+
+            if(response.IsSuccessStatusCode){
+                TempData["success"]="Fruit was updated successfully";
+                return RedirectToPage("Index");
+            }
+            else {
+                TempData["failure"]="Fruit was not updated";
+                return RedirectToPage("Index");
+            }
+        }
+
 	}
 }
 
